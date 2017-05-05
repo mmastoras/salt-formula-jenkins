@@ -15,8 +15,8 @@ setup_jenkins_cli:
     - cmd: jenkins_service_running
     
 restart_jenkins:
-  service jenkins restart && sleep 5:
-    cmd.run
+  cmd.run:
+    - name: service jenkins restart && sleep 5
 
 {%- for plugin in master.plugins %}
 
