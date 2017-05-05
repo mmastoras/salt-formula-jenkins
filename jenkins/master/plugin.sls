@@ -3,7 +3,7 @@
 {{ master.home }}/updates:
   file.directory:
   - user: jenkins
-  - group: nogroup
+  - group: jenkins
 
 setup_jenkins_cli:
   cmd.run:
