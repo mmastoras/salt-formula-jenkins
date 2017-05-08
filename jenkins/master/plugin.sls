@@ -14,10 +14,6 @@ setup_jenkins_cli:
   - cwd: {{ master.home }}
   - require:
     - cmd: jenkins_service_running
-    
-restart_jenkins:
-  cmd.run:
-    - name: service jenkins restart && sleep 120
 
 {%- for plugin in master.plugins %}
 
